@@ -1,5 +1,5 @@
-import { FC } from 'react';
-import { IRouteComponentProps } from 'umi';
+import { FC, useState, useEffect } from 'react';
+import { IRouteComponentProps, useLocation } from 'umi';
 import { Menu } from 'antd';
 import { MenuInfo } from 'rc-menu/lib/interface';
 import './index.less';
@@ -16,8 +16,24 @@ const menuList = [
   },
 ];
 
+const useMenuSelectKeys = () => {
+  const [selectKeys, setSelectKeys] = useState<string[]>([]);
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    const match =
+      menuList.find(
+        (menu) => menu.key !== '/' && pathname.includes(menu.key),
+      ) || menuList[0];
+    match && setSelectKeys([match.key]);
+  }, [pathname]);
+
+  return { selectKeys };
+};
+
 const Layout: FC<IRouteComponentProps> = (props) => {
   const { pathname } = props.location;
+  const { selectKeys } = useMenuSelectKeys();
 
   const onChangeRoute = ({ key }: MenuInfo) => {
     if (pathname !== key) {
@@ -30,7 +46,7 @@ const Layout: FC<IRouteComponentProps> = (props) => {
       <div className="layout-header">
         <Menu
           mode="horizontal"
-          selectedKeys={[pathname]}
+          selectedKeys={selectKeys}
           onClick={onChangeRoute}
         >
           {menuList.map((menu) => (
