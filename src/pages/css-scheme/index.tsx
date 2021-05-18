@@ -14,6 +14,11 @@ const cssSchemeTabConfig = [
     key: 'cssModule',
     component: dynamic(() => import('./components/CssModule')),
   },
+  {
+    title: 'css in js',
+    key: 'cssInJs',
+    component: dynamic(() => import('./components/CssInJs')),
+  },
 ];
 
 const index = () => {
