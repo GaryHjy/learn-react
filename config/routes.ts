@@ -3,7 +3,8 @@ const routes = [
     path: '/',
     component: '@/layouts/index',
     routes: [
-      { path: '/', component: '@/pages/Index' },
+      { path: '/', redirect: '/home' },
+      { path: '/home', component: '@/pages/Home' },
       { path: '/css-scheme', component: '@/pages/CssScheme' },
       { path: '/react-hooks', component: '@/pages/ReactHooks' },
     ],

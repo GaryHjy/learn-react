@@ -1,4 +1,4 @@
-export default function IndexPage() {
+export default function Home() {
   return (
     <div>
       <h1>首页</h1>

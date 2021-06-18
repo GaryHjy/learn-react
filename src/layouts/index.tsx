@@ -8,7 +8,7 @@ import './index.less';
 const menuList = [
   {
     title: '首页',
-    key: '/',
+    key: '/home',
   },
   {
     title: 'css方案',
