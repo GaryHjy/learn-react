@@ -14,6 +14,10 @@ const menuList = [
     title: 'css方案',
     key: '/css-scheme',
   },
+  {
+    title: 'react-hooks',
+    key: '/react-hooks',
+  },
 ];
 
 const useMenuSelectKeys = () => {
