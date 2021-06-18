@@ -1,4 +1,5 @@
 import { defineConfig } from 'umi';
+import routes from './config/routes';
 
 export default defineConfig({
   title: 'learn react',
@@ -12,8 +13,6 @@ export default defineConfig({
     // dark: true
     compact: true,
   },
-  // routes: [
-  //   { path: '/', component: '@/pages/index' },
-  // ],
+  routes,
   fastRefresh: {},
 });
