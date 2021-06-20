@@ -16,7 +16,7 @@ const menuList = [
   },
   {
     title: 'react-hooks',
-    key: '/react-hooks',
+    key: '/react-hooks/use-state',
   },
 ];
 
