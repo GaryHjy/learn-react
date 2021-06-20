@@ -6,7 +6,24 @@ const routes = [
       { path: '/', redirect: '/home' },
       { path: '/home', component: '@/pages/Home' },
       { path: '/css-scheme', component: '@/pages/CssScheme' },
-      { path: '/react-hooks', component: '@/pages/ReactHooks' },
+      {
+        path: '/react-hooks',
+        component: '@/pages/ReactHooks',
+        routes: [
+          {
+            path: '/react-hooks/use-state',
+            component: '@/pages/ReactHooks/UseState',
+          },
+          {
+            path: '/react-hooks/use-effect',
+            component: '@/pages/ReactHooks/UseEffect',
+          },
+          {
+            path: '/react-hooks/use-context',
+            component: '@/pages/ReactHooks/UseContext',
+          },
+        ],
+      },
     ],
   },
   { path: '*', component: '@/pages/404' },
