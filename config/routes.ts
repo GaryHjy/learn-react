@@ -6,6 +6,7 @@ const routes = [
       { path: '/', redirect: '/home' },
       { path: '/home', component: '@/pages/Home' },
       { path: '/css-scheme', component: '@/pages/CssScheme' },
+      { path: '/react-setState', component: '@/pages/ReactSetState' },
       {
         path: '/react-hooks',
         component: '@/pages/ReactHooks',

@@ -15,6 +15,10 @@ const menuList = [
     key: '/css-scheme',
   },
   {
+    title: 'React setState',
+    key: '/react-setState',
+  },
+  {
     title: 'react-hooks',
     key: '/react-hooks/use-state',
   },
